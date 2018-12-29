@@ -77,6 +77,7 @@ endfunction
 " @throws WrongType
 function! maktaba#IsAtLeastVersion(version) abort
   call maktaba#ensure#Matches(a:version, '\v^\d+\.\d+\.\d+')
+  return 1
   " Extract MAJOR.MINOR.PATCH, ignoring any additional labels like "rc1".
   let l:version = matchlist(a:version, '\v^(\d+)\.(\d+)\.(\d+)')[1:3]
   for l:i in range(len(s:version))
