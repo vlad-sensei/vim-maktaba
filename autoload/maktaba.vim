@@ -56,11 +56,11 @@ endfunction
 " Use |maktaba#IsAtLeastVersion| to check whether this version of maktaba has
 " passed a given version number.
 
-if !exists('maktaba#VERSION')
-  let maktaba#VERSION = s:maktaba.AddonInfo().version
-  lockvar maktaba#VERSION
-  let s:version = map(split(maktaba#VERSION, '\.'), 'v:val + 0')
-endif
+" if !exists('maktaba#VERSION')
+"   let maktaba#VERSION = s:maktaba.AddonInfo().version
+"   lockvar maktaba#VERSION
+"   let s:version = map(split(maktaba#VERSION, '\.'), 'v:val + 0')
+" endif
 
 
 
